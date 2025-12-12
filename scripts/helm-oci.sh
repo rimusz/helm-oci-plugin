@@ -297,9 +297,16 @@ parse_args() {
         case $1 in
             list|search|inspect)
                 command="$1"
-                arg1="$2"
-                arg2="$3"
-                shift 3
+                shift
+                # Collect positional arguments until we hit a flag or run out
+                if [[ $# -gt 0 ]] && [[ "$1" != --* ]]; then
+                    arg1="$1"
+                    shift
+                fi
+                if [[ $# -gt 0 ]] && [[ "$1" != --* ]]; then
+                    arg2="$1"
+                    shift
+                fi
                 ;;
             --username)
                 username="$2"

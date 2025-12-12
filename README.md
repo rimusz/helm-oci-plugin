@@ -24,7 +24,7 @@ A Helm plugin that provides OCI registry operations using Google crane, enabling
 
 ```bash
 # Install from a Git repository
-helm plugin install https://github.com/rimusz/helm-oci-plugin
+helm plugin install https://github.com/rimusz/helm-oci-plugin --verify=false
 
 # Or install from local directory
 cd /path/to/helm-oci-plugin
