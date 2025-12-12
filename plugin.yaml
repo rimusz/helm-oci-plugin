@@ -1,5 +1,5 @@
 name: "oci"
-version: "0.1.1"
+version: "0.1.2"
 usage: "Helm plugin for OCI registry operations using crane"
 description: "List and search Helm charts in OCI registries using Google crane"
 ignoreFlags: false

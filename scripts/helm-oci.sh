@@ -218,8 +218,8 @@ inspect_chart() {
 
     log_info "Inspecting chart: $chart_ref"
 
-    # Build crane inspect command
-    local inspect_cmd=("$CRANE_BINARY" "inspect" "$chart_ref")
+    # Build crane manifest command
+    local inspect_cmd=("$CRANE_BINARY" "manifest" "$chart_ref")
 
     if [[ -n "$username" ]] && [[ -n "$password" ]]; then
         inspect_cmd+=("--username" "$username" "--password" "$password")
