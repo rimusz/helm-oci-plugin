@@ -1,0 +1,9 @@
+name: "oci"
+version: "0.1.0"
+usage: "Helm plugin for OCI registry operations using crane"
+description: "List and search Helm charts in OCI registries using Google crane"
+ignoreFlags: false
+command: "$HELM_PLUGIN_DIR/scripts/helm-oci.sh"
+hooks:
+  install: "cd $HELM_PLUGIN_DIR && ./scripts/install-crane.sh"
+  update: "cd $HELM_PLUGIN_DIR && ./scripts/install-crane.sh"
